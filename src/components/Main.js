@@ -5,9 +5,7 @@ import { useState} from 'react'
 const Main = () => {
 
   const [number, setNumber] = useState('')
-
   const [numberOld, setNumberOld] = useState()
-
   const [operation, setOperation] = useState()
 
   function numberEntrada(e) {
@@ -40,10 +38,9 @@ const Main = () => {
       if(number ==='0'){
         return
       }else{
-        result = number / numberOld
+        result = numberOld/number 
 
       }
-     
     }
 
     setNumber(result)    
@@ -54,15 +51,7 @@ const Main = () => {
     setNumber('')
     operation('')
     setNumberOld('')
-  }
-
-
-
-
-
-
-
-    
+  }   
 
   return (
     <div className='main'>
